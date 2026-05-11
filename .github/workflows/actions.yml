@@ -1,5 +1,8 @@
 name: Github Actions 연습하기
-on: pull_request
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
