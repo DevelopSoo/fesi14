@@ -1,8 +1,5 @@
 name: Github Actions 연습하기
-on:
-  push:
-    branches:
-      - feature/*
+on: workflow_dispatch
 
 jobs:
   test:
