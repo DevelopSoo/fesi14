@@ -1,5 +1,10 @@
 name: Github Actions 연습하기
-on: push
+# main, feature/test, dev, hotfix/~~~ 모든 브랜치에서 push를 하면 무조건 실행된다.
+# 특정 브랜치에서만 이 워크플로우를 실행하고 싶어.
+on:
+  push:
+    branches:
+      - feature/*
 
 jobs:
   test:
