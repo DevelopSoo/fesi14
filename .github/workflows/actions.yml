@@ -1,8 +1,8 @@
 name: Github Actions 연습하기
 on:
-  push:
+  pull_request:
     branches:
-      - feature/*
+      - main
 
 jobs:
   test:
