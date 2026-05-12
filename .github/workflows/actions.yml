@@ -1,23 +1,21 @@
-name: Github Actions 연습하기
-on: workflow_dispatch
+# .github/workflows/actions.yml
+
+name: Github Actions로 작업 병렬로 실행하기
+on: push
 
 jobs:
-  test:
+  first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Github Repository 불러오기
-        uses: actions/checkout@v5
+      - name: 첫 번째 작업의 1단계
+        run: echo "첫 번째 작업의 첫 번째 단계입니다."
+      - name: 첫 번째 작업의 2단계
+        run: echo "첫 번째 작업의 두 번째 단계입니다."
 
-      - name: Node.js 설치
-        uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-
-      - name: 의존성 라이브러리 설치
-        # npm install: 그냥 설치
-        # npm ci: 설치하는데, 무조건 package-lock.json을 확인하고 설치한다.
-        # package-lock.json 용도: 모든 팀원이 동일한 패키지 버전을 사용할 수 있도록 정보를 저장해놓는 곳
-        run: npm ci
-
-      - name: 테스트 실행하기
-        run: npm run test
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 두 번째 작업의 1단계
+        run: echo "두 번째 작업의 첫 번째 단계입니다."
+      - name: 두 번째 작업의 2단계
+        run: echo "두 번째 작업의 두 번째 단계입니다."
