@@ -3,5 +3,5 @@
 'use client';
 
 export default function Home() {
-  return <div>배포</div>;
+  return <div>배포2</div>;
 }
