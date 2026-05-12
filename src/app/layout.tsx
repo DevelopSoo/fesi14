@@ -1,9 +1,9 @@
 // src/app/layout.tsx
 
-import "./globals.css";
-import QueryProvider from "@/providers/QueryProvider";
-import { initMocks } from "@/mocks";
-import { MSWProvider } from "@/providers/MSWProvider";
+import './globals.css';
+import { initMocks } from '@/mocks';
+import { MSWProvider } from '@/providers/MSWProvider';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 initMocks();
 
@@ -15,9 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MSWProvider>
-          <QueryProvider>{children}</QueryProvider>
-        </MSWProvider>
+        <MSWProvider>{children}</MSWProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
