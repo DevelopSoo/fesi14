@@ -3,5 +3,5 @@
 "use client";
 
 export default function Home() {
-  return <>2</>;
+  return <>에러나는 코드</>;
 }
