@@ -1,7 +1,7 @@
 // src/app/page.tsx
 
-"use client";
+'use client';
 
 export default function Home() {
-  return <>에러나는 코드</>;
+  return <div>배포</div>;
 }
